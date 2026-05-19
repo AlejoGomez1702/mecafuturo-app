@@ -37,7 +37,7 @@ jobs:
           npm run build -- --configuration production --base-href "/${REPO_NAME}/"
 
       - name: Add SPA fallback
-        run: cp dist/mecafuturo-app/index.html dist/mecafuturo-app/404.html
+        run: cp dist/mecafuturo-app/browser/index.html dist/mecafuturo-app/browser/404.html
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
@@ -45,7 +45,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/mecafuturo-app
+          path: dist/mecafuturo-app/browser
 
   deploy:
     environment:
