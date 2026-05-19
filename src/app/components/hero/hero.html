@@ -1,0 +1,129 @@
+<section id="hero" class="hero-section" aria-labelledby="hero-title">
+  <div class="hero-grid"></div>
+  <div class="hero-glow hero-glow-1"></div>
+  <div class="hero-glow hero-glow-2"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 relative z-10 w-full">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+      <!-- Left: Content -->
+      <div class="space-y-8">
+        <!-- Mobile: mascota pequeña -->
+        <div appReveal class="flex justify-center lg:hidden reveal">
+          <img
+            ngSrc="/images/mascota-mecafuturo.png"
+            alt="Mascota MECAFUTURO"
+            width="160"
+            height="198"
+            class="mascota-img"
+            priority
+          />
+        </div>
+
+        <!-- Desktop: badge -->
+        <div appReveal class="badge-hero reveal hidden lg:inline-flex">
+          <span class="badge-dot"></span>
+          Empresa certificada &amp; especializada
+        </div>
+
+        <h1 id="hero-title" appReveal class="hero-title reveal delay-100">
+          Expertos en<br />
+          Reparación de<br />
+          <span class="text-yellow-glow">{{ typedText() }}</span>
+          <span class="blink-cursor" aria-hidden="true"></span>
+        </h1>
+
+        <p appReveal class="text-lg leading-relaxed max-w-xl reveal delay-200" style="color: #9ca3af;">
+          Somos la empresa de referencia en reparación, mantenimiento preventivo y correctivo de
+          maquinaria industrial. Tecnología avanzada, técnicos expertos y atención personalizada
+          para mantener tu maquinaria en óptimas condiciones.
+        </p>
+
+        <div appReveal class="flex flex-wrap gap-3 reveal delay-300">
+          <a href="#contact" class="btn-primary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            Solicitar Diagnóstico
+          </a>
+          <a href="#services" class="btn-secondary">
+            Ver Servicios
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+              <path d="M19 9l-7 7-7-7" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Stats -->
+        <div appReveal class="grid grid-cols-2 sm:grid-cols-4 gap-5 pt-4 reveal delay-400">
+          <div class="stat-card">
+            <div class="stat-number">+10</div>
+            <div class="stat-label">Años de<br />experiencia</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">+500</div>
+            <div class="stat-label">Equipos<br />reparados</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">24h</div>
+            <div class="stat-label">Atención<br />rápida</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Técnicos<br />certificados</div>
+          </div>
+        </div>
+
+        <!-- Trust badges -->
+        <div appReveal class="flex flex-wrap gap-2 reveal delay-500">
+          <span class="trust-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#F5C400" stroke-width="2" aria-hidden="true">
+              <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+            Garantía certificada
+          </span>
+          <span class="trust-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#F5C400" stroke-width="2" aria-hidden="true">
+              <path d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+            Respuesta en 24h
+          </span>
+          <span class="trust-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#F5C400" stroke-width="2" aria-hidden="true">
+              <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            Equipo especializado
+          </span>
+        </div>
+      </div>
+
+      <!-- Right: Mascota -->
+      <div class="hero-mascota-wrap hidden lg:flex reveal-right delay-200" appReveal>
+        <div class="hero-ring hero-ring-1"></div>
+        <div class="hero-ring hero-ring-2"></div>
+        <div class="hero-ring hero-ring-3"></div>
+        <div class="relative">
+          <img
+            ngSrc="/images/mascota-mecafuturo.png"
+            alt="Mascota MECAFUTURO - Lobo mecánico técnico"
+            width="340"
+            height="420"
+            class="mascota-img relative z-10"
+            priority
+          />
+          <div class="mascota-glow"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div
+    style="position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 0.5rem; opacity: 0.6;"
+    aria-hidden="true"
+  >
+    <span style="font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: #999;">Scroll</span>
+    <div style="width: 1px; height: 40px; background: linear-gradient(180deg, #F5C400, transparent);"></div>
+  </div>
+</section>

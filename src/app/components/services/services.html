@@ -1,0 +1,54 @@
+<section id="services" class="py-24 lg:py-32" style="background: #0a0a0a;" aria-labelledby="services-title">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="text-center mb-16">
+      <div appReveal class="section-tag inline-flex reveal">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="#F5C400" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+        Nuestros servicios
+      </div>
+      <h2 id="services-title" appReveal class="section-title mt-4 reveal delay-100">
+        Soluciones integrales para<br />
+        tu <span class="text-yellow">maquinaria industrial</span>
+      </h2>
+      <p appReveal class="mt-4 max-w-2xl mx-auto reveal delay-200" style="color: #9ca3af;">
+        Ofrecemos una gama completa de servicios especializados para mantener tu flota operativa al máximo rendimiento.
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      @for (service of services; track service.title) {
+        <article appReveal class="service-card reveal {{ service.delay }}">
+          <div class="service-img-wrap">
+            <div class="service-placeholder" aria-hidden="true">{{ service.emoji }}</div>
+            <div class="service-img-overlay"></div>
+            <div class="service-icon-wrap" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path [attr.d]="service.iconPath" />
+              </svg>
+            </div>
+          </div>
+          <div class="service-body">
+            <h3 class="service-title-text">{{ service.title }}</h3>
+            <p class="service-desc">{{ service.desc }}</p>
+            <div class="service-arrow" aria-hidden="true">
+              Conocer más
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </div>
+          </div>
+        </article>
+      }
+    </div>
+
+    <div appReveal class="text-center mt-12 reveal">
+      <a href="#contact" class="btn-primary">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+          <path d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V6a2 2 0 012-2z" />
+        </svg>
+        Solicitar Cotización
+      </a>
+    </div>
+
+  </div>
+</section>

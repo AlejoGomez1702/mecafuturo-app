@@ -1,0 +1,10 @@
+import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { NgOptimizedImage } from '@angular/common';
+
+@Component({
+  selector: 'app-footer',
+  imports: [NgOptimizedImage],
+  templateUrl: './footer.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+})
+export class FooterComponent {}

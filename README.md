@@ -57,3 +57,32 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## Deploy to GitHub Pages (GitHub Actions)
+
+This repository is configured to deploy automatically to GitHub Pages using GitHub Actions.
+
+### How it works
+
+- On every push to `main`, the workflow installs dependencies and builds the app.
+- The build uses a dynamic `base-href` based on the repository name.
+- The generated files in `dist/mecafuturo-app` are published to GitHub Pages.
+- A `404.html` copy of `index.html` is created to support Angular SPA fallback.
+
+### First-time setup (GitHub)
+
+1. Open your repository on GitHub.
+2. Go to **Settings > Pages**.
+3. In **Build and deployment**, set **Source** to **GitHub Actions**.
+4. Push changes to the `main` branch.
+5. Wait for the workflow **Deploy Angular to GitHub Pages** to finish.
+
+### Workflow location
+
+- `.github/workflows/deploy-gh-pages.yml`
+
+### Published URL
+
+For repository `OWNER/mecafuturo-app`, your site URL will be:
+
+`https://OWNER.github.io/mecafuturo-app/`

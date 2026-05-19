@@ -1,0 +1,16 @@
+<section id="metrics" #metricsEl class="metrics-section py-16" aria-label="Estadísticas de la empresa">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col sm:flex-row items-stretch divide-y sm:divide-y-0 sm:divide-x divide-white/5">
+      @for (metric of metrics(); track metric.label; let last = $last) {
+        <div class="metric-card flex-1">
+          <div class="metric-number">{{ metric.displayValue.toLocaleString() }}{{ metric.suffix }}</div>
+          <div class="metric-label">{{ metric.label }}</div>
+          <div class="metric-desc">{{ metric.desc }}</div>
+        </div>
+        @if (!last) {
+          <div class="metric-divider hidden sm:block"></div>
+        }
+      }
+    </div>
+  </div>
+</section>

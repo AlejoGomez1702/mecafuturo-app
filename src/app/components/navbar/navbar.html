@@ -1,0 +1,50 @@
+<header role="banner" class="navbar" [class.scrolled]="scrolled()">
+  <nav
+    class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between"
+    aria-label="Navegación principal"
+  >
+    <a href="#hero" class="flex items-center gap-2 flex-shrink-0 group" aria-label="MECAFUTURO inicio">
+      <span
+        class="font-extrabold text-2xl tracking-wide text-white group-hover:text-yellow transition-colors duration-200"
+        style="font-family: 'Barlow Condensed', sans-serif;"
+      >
+        MECA<span style="color: #F5C400;">FUTURO</span>
+      </span>
+    </a>
+
+    <ul class="hidden lg:flex items-center gap-8" role="list">
+      <li><a href="#about" class="nav-link">Nosotros</a></li>
+      <li><a href="#services" class="nav-link">Servicios</a></li>
+      <li><a href="#gallery" class="nav-link">Proyectos</a></li>
+      <li><a href="#testimonials" class="nav-link">Clientes</a></li>
+      <li><a href="#contact" class="nav-link">Contacto</a></li>
+    </ul>
+
+    <div class="flex items-center gap-4">
+      <a href="#contact" class="btn-cta-nav hidden sm:inline-flex">Solicitar Cotización</a>
+      <button
+        class="hamburger lg:hidden"
+        [class.open]="menuOpen()"
+        (click)="toggleMenu()"
+        [attr.aria-expanded]="menuOpen()"
+        aria-label="Abrir menú"
+      >
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<nav
+  class="mobile-menu"
+  [class.open]="menuOpen()"
+  role="navigation"
+  aria-label="Menú móvil"
+>
+  <a href="#about" class="nav-link" (click)="closeMenu()">Nosotros</a>
+  <a href="#services" class="nav-link" (click)="closeMenu()">Servicios</a>
+  <a href="#gallery" class="nav-link" (click)="closeMenu()">Proyectos</a>
+  <a href="#testimonials" class="nav-link" (click)="closeMenu()">Clientes</a>
+  <a href="#contact" class="nav-link" (click)="closeMenu()">Contacto</a>
+  <a href="#contact" class="btn-primary mt-4" (click)="closeMenu()">Solicitar Cotización</a>
+</nav>

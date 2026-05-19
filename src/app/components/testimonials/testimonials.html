@@ -1,0 +1,33 @@
+<section id="testimonials" class="py-24" style="background: #111111;" aria-labelledby="testimonials-title">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="text-center mb-14">
+      <div appReveal class="section-tag inline-flex reveal">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="#F5C400" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" /></svg>
+        Testimonios
+      </div>
+      <h2 id="testimonials-title" appReveal class="section-title mt-4 reveal delay-100">
+        Lo que dicen nuestros<br />
+        <span class="text-yellow">clientes industriales</span>
+      </h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      @for (t of testimonials; track t.name) {
+        <article appReveal class="testimonial-card reveal {{ t.delay }}">
+          <div class="testimonial-quote" aria-hidden="true">&ldquo;</div>
+          <div class="testimonial-stars" aria-label="5 estrellas">★★★★★</div>
+          <p class="testimonial-text">{{ t.text }}</p>
+          <div style="display: flex; align-items: center; gap: 0.875rem;">
+            <div class="testimonial-avatar" aria-hidden="true">{{ t.initials }}</div>
+            <div>
+              <div class="testimonial-name" style="font-weight: 700; font-size: 0.95rem;">{{ t.name }}</div>
+              <div style="font-size: 0.8rem; color: #999;">{{ t.company }}</div>
+            </div>
+          </div>
+        </article>
+      }
+    </div>
+
+  </div>
+</section>

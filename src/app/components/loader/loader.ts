@@ -1,14 +1,21 @@
 import { Component, OnInit, signal, ChangeDetectionStrategy } from '@angular/core';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-loader',
+  imports: [NgOptimizedImage],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     @if (visible()) {
-      <div class="loader-overlay" [class.hidden]="!visible()" role="status" aria-label="Cargando MECAFUTURO">
-        <div style="font-size: 2.5rem; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; letter-spacing: 0.1em; color: #F5C400;">
-          MECA<span style="color: #fff;">FUTURO</span>
-        </div>
+      <div class="loader-overlay" role="status" aria-label="Cargando MECAFUTURO">
+        <img
+          ngSrc="/images/logo-mecafuturo.png"
+          alt="MECAFUTURO S.A.S"
+          width="160"
+          height="60"
+          style="height: 100px; width: auto; object-fit: contain;"
+          priority
+        />
         <div class="loader-bar-wrap">
           <div class="loader-bar"></div>
         </div>
