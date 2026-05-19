@@ -9,7 +9,7 @@ import { NgOptimizedImage } from '@angular/common';
     @if (visible()) {
       <div class="loader-overlay" role="status" aria-label="Cargando MECAFUTURO">
         <img
-          ngSrc="/images/logo-mecafuturo.png"
+          ngSrc="images/logo-mecafuturo.png"
           alt="MECAFUTURO S.A.S"
           width="160"
           height="60"
